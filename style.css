@@ -143,7 +143,7 @@ button {
 /* Styling for audio upload file menu */
 #audioFileChooser {
 	font-weight: bold;
-	padding: 2px 4px 2px 4px;
+	padding: 2px 3px 2px 3px;
 	border-radius: 4px;
     margin-bottom: 0px;
     /*display:block;*/
@@ -152,14 +152,15 @@ button {
     /*width:90%*/;
     border: 2px solid rgb(117, 62, 219);
     background-color: rgb(252, 250, 255);
-    width: 300px;
+    width: 304px;
     font-family: 'League Spartan', sans-serif;
     font-size: 16px;
 }
 
 #audioFileChooser button {
-    margin:0px;
     padding:0px;
+    font-size: 14px;
+    margin-left: 5px;
 }
 
 /* Styling for radio input menu */

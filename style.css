@@ -1,5 +1,5 @@
 body {
-    font-family: 'helvetica';
+    font-family: 'League Spartan', sans-serif;
     background-color: #eeeeee;
     font-size: 16px;
 }
@@ -48,11 +48,11 @@ svg {
   /* your conditional / responsive CSS inside this condition */
 
     #svgContainerDiv{
-        height: 88vh;
+        height: 85vh;
     }
 
     #mainSvg {
-        height: 88vh;
+        height: 85vh;
     }
 
 }
@@ -123,7 +123,7 @@ button {
 }
 
 #visualizationMenu, #colourMenu {
-    width: 155px;
+    width: 158px;
 }
 
 /*

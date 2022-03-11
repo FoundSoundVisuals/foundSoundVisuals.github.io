@@ -4,6 +4,7 @@
 - Add for gradient / "textured" backgrounds?
 - Feature to import audio from Spotify or YouTube URL?
 - Mobile formatting (menu, shape sizes, etc.)
+- Readme file
 */
 
 var visualizationMenu = document.getElementById("visualizationMenu");
@@ -763,7 +764,7 @@ function runVisualization() {
 
 
             svg.selectAll("path")
-                .attr('stroke-width',Math.min(40,Math.pow(frequencySum/8000,1.6)));       
+                .attr('stroke-width',Math.min(35,Math.pow(frequencySum/6000,1.4)));       
 
         }
     

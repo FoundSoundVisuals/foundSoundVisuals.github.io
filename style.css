@@ -2,14 +2,15 @@ body {
     font-family: 'League Spartan', sans-serif;
     background-color: #eeeeee;
     font-size: 16px;
-    margin: 8px 0px 8px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 table {
     border-collapse: collapse;
     margin:auto;
     font-size:1em;
-    max-width:95%;
+    /*max-width:95%;*/
+    margin: 0px 0px 0px 0px;
 }
 
 td {
@@ -22,12 +23,19 @@ td {
     display:none;
 }
 
+#navMenuDiv{
+    display: flex;              /* establish flex container */
+    flex-direction: row;     /* stack flex items vertically */
+    /*justify-content: center;    /* center items vertically, in this case */
+    /*align-items: center;        /* center items horizontally, in this case */
+    margin-bottom: 2px;
+}
+
 /* css as usual */
 #svgContainerDiv{
     background-color: #78B7C5;
     width: 100vw;
     height: 65vh;
-    display: block;
     margin: 0;
 }
 
@@ -35,7 +43,6 @@ td {
     width: 100vw;
     height: 65vh;
     margin: 10px 0px 0px 0px;
-    display: block;
 }
 
 /* condition for screen size minimum of 500px */
@@ -57,6 +64,12 @@ button {
     border: 2px solid rgb(180, 180, 180);
     border-radius: 4px;
     font-family: 'League Spartan', sans-serif;
+}
+
+#toggleMenuButton{
+    width:100px;
+    height:25px;
+    margin:auto;
 }
 
 #microphoneButton, #playAudioFileButton, #pauseAudioFileButton, #rewindAudioFileButton {
@@ -87,9 +100,9 @@ button {
     border: 2px solid rgb(180, 151, 233);
 }
 
-#audioTable{
+#menuTable{
     text-align:center;
-    margin:auto;
+    /*margin:auto;*/
 }
 
 #audioMenuDiv{

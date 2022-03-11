@@ -16,9 +16,6 @@ var colourChoice = String(colourMenu.value);
 var svgContainerDiv = document.getElementById("svgContainerDiv");
 var mainSvg = document.getElementById("mainSvg");
 
-var svgHeight = svgContainerDiv.clientHeight;
-var svgWidth = svgContainerDiv.clientWidth;
-
 var svg = d3.select("#mainSvg");
 
 var userInputArray = document.getElementsByClassName("userInput");
@@ -48,6 +45,17 @@ var uploadTrackDiv = document.getElementById("uploadTrackDiv");
 
 var volumeMultiplier = 1;
 
+var toggleMenuButton = document.getElementById("toggleMenuButton");
+var showMenu = true;
+
+var menuTable = document.getElementById("menuTable");
+
+var delayInMilliseconds = 0;
+
+var navMenuHeight = document.getElementById('navMenuDiv').clientHeight;
+
+var svgHeight = svgContainerDiv.clientHeight;
+var svgWidth = svgContainerDiv.clientWidth;
 
 //Visualization Inputs
 var barPadding = 1;
@@ -98,6 +106,7 @@ console.log("Visualization choice: "+visualizationChoice);
 //main method
 addEventListeners();
 getUserInputs();
+setSvgSize();
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var audioSrc;
 var analyser = audioCtx.createAnalyser();
@@ -125,6 +134,40 @@ function addEventListeners(){
     //Rewind button functionality
     rewindAudioFileButton.addEventListener("click", clickRewindButton);
 
+    //toggle menu button
+    toggleMenuButton.addEventListener("click", toggleMenu);
+
+}
+
+function setSvgSize(){
+    setTimeout(function() {
+        navMenuHeight = document.getElementById('navMenuDiv').clientHeight;
+    
+        svgContainerDiv.style.height = (window.innerHeight - navMenuHeight - 12)+"px";
+        mainSvg.style.height = (window.innerHeight - navMenuHeight - 12)+"px";
+        
+        console.log("Window innerHeight: "+window.innerHeight);
+        console.log("navMenuHeight: "+navMenuHeight);
+        console.log("svgContainerDivHeight: "+svgContainerDiv.style.height);
+
+        svgHeight = svgContainerDiv.clientHeight;
+        svgWidth = svgContainerDiv.clientWidth;
+        
+    }, delayInMilliseconds);
+}
+
+function toggleMenu(){
+    if(showMenu == true){
+        menuTable.classList.add("hide");
+        toggleMenuButton.innerHTML = "Show Menu <i class=\"fa-solid fa-eye\"></i>";
+        showMenu = false;
+        setSvgSize();
+    } else {
+        menuTable.classList.remove("hide");
+        toggleMenuButton.innerHTML = "Hide Menu <i class=\"fa-solid fa-eye-slash\"></i>";
+        showMenu = true;
+        setSvgSize();
+    }
 }
 
 function showDemoTrackMenu(){

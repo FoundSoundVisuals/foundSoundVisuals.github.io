@@ -43,7 +43,7 @@ svg {
 }
 
 /* condition for screen size minimum of 500px */
-@media (min-width:500px) {
+@media (min-width:700px) {
 
   /* your conditional / responsive CSS inside this condition */
 
@@ -63,6 +63,12 @@ button {
     border-radius: 4px;
 }
 
+#microphoneButton, #playAudioFileButton, #pauseAudioFileButton, #rewindAudioFileButton {
+    background-color:#cccccc;
+    color: black;
+    font-size: 16px;
+}
+
 #microphoneButton{
     width:80px;
 }
@@ -75,10 +81,6 @@ button {
 #pauseAudioFileButton, #rewindAudioFileButton {
     height:26px;
     width:38px;
-}
-
-#microphoneButton, #playAudioFileButton, #pauseAudioFileButton, #rewindAudioFileButton {
-    background-color:#cccccc;
 }
 
 #microphoneButton:focus, #playAudioFileButton:focus, #pauseAudioFileButton:focus {

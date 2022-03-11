@@ -2,13 +2,14 @@ body {
     font-family: 'League Spartan', sans-serif;
     background-color: #eeeeee;
     font-size: 16px;
+    margin: 8px 0px 8px 0px;
 }
 
 table {
     border-collapse: collapse;
     margin:auto;
     font-size:1em;
-    max-width:90%;
+    max-width:95%;
 }
 
 td {
@@ -21,25 +22,20 @@ td {
     display:none;
 }
 
-
-svg {
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-}
-
 /* css as usual */
 #svgContainerDiv{
     background-color: #78B7C5;
-    width: 98vw;
-    height: 50vh;
+    width: 100vw;
+    height: 65vh;
     display: block;
-    margin: auto;
+    margin: 0;
 }
 
 #mainSvg {
-    width: 98vw;
-    height: 50vh;
+    width: 100vw;
+    height: 65vh;
+    margin: 10px 0px 0px 0px;
+    display: block;
 }
 
 /* condition for screen size minimum of 500px */

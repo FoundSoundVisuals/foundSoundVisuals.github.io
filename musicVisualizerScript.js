@@ -66,7 +66,7 @@ var wavesRows = 8;
 var wavesCols = 3;
 var wavesData = d3.range(1, wavesRows);
 
-var wireData = d3.range(-3 * Math.PI, 3 * Math.PI, 0.04);
+var wireData = d3.range(-4 * Math.PI, 4 * Math.PI, 0.01);
 
 var barsFrequencyData = new Uint8Array(numBars);
 var circlesFrequencyData = new Uint8Array(numCircles);
@@ -74,7 +74,7 @@ var circles2FrequencyData = new Uint8Array(numCircles2);
 var circles3FrequencyData = new Uint8Array(numCircles3);
 var dancingCirclesFrequencyData = new Uint8Array(numDancingCircles);
 var wavesFrequencyData = new Uint8Array(wavesRows);
-var wireFrequencyData = new Uint8Array(wireData.length);
+var wireFrequencyData = new Uint8Array(1);
 
 
 //Colour palettes -- background, shape fill, shape outline
@@ -751,11 +751,14 @@ function runVisualization() {
                 frequencySum += wireFrequencyData[i];
             }
 
+            //console.log("wireData length: "+wireFrequencyData.length);
+            //console.log("Frequency Sum: "+frequencySum);
+
             for (var i = 0; i < wireData.length; i++) {
                 var p = wireData[i];
-                d += 0.23 * svgWidth * (Math.sin((2 + 0.2 * Math.cos(t / 4500))  * p) + Math.sin(4.02 * p));
+                d += 0.23 * svgWidth * (Math.sin((2 + 0.2 * Math.cos(t / 12000))  * p) + Math.sin(4.02 * p));
                 d += ",";
-                d += 0.23 * svgHeight * (Math.sin((3 + 0.2 * Math.cos(t / 4500)) * p) + Math.sin(6.02 * p));
+                d += 0.23 * svgHeight * (Math.sin((3 + 0.2 * Math.cos(t / 12000)) * p) + Math.sin(6.02 * p));
                 if (i != wireData.length - 1) d += "L";
             }
 
@@ -764,7 +767,7 @@ function runVisualization() {
 
 
             svg.selectAll("path")
-                .attr('stroke-width',Math.min(35,Math.pow(frequencySum/6000,1.4)));       
+                .attr('stroke-width',Math.max(1,Math.min(8,1+Math.pow(frequencySum/60,2.0))));       
 
         }
     

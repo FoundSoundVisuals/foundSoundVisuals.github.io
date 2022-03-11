@@ -58,7 +58,6 @@ svg {
 }
 
 button {
-    font-size: 16px;
     border: 2px solid rgb(180, 180, 180);
     border-radius: 4px;
     font-family: 'League Spartan', sans-serif;
@@ -142,8 +141,7 @@ button {
 
 /* Styling for audio upload file menu */
 #audioFileChooser {
-	font-weight: bold;
-	padding: 2px 3px 2px 3px;
+	padding: 1px 3px 1px 3px;
 	border-radius: 4px;
     margin-bottom: 0px;
     /*display:block;*/
@@ -152,9 +150,9 @@ button {
     /*width:90%*/;
     border: 2px solid rgb(117, 62, 219);
     background-color: rgb(252, 250, 255);
-    width: 304px;
+    width: 311px;
     font-family: 'League Spartan', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #audioFileChooser button {

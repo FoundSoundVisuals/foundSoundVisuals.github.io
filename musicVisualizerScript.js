@@ -687,7 +687,7 @@ function runVisualization() {
                     
                         return 600 * (i % 2) - 150 + 20 * Math.sin(r + t / 1500000) - bounce;
                     })
-                    .x(function(d) { return (r * t / 10) % (svgWidth / (wavesCols - 2)) + d * svgWidth / (wavesCols - 1); })
+                    .x(function(d) { return (r * t / 20) % (svgWidth / (wavesCols - 2)) + d * svgWidth / (wavesCols - 1); })
                     (d3.range(-3, wavesCols + 2));
             });
 
@@ -767,7 +767,7 @@ function runVisualization() {
 
 
             svg.selectAll("path")
-                .attr('stroke-width',Math.max(1,Math.min(8,1+Math.pow(frequencySum/60,2.0))));       
+                .attr('stroke-width',Math.max(1,Math.min(8,1+Math.pow(frequencySum/80,2.5))));       
 
         }
     

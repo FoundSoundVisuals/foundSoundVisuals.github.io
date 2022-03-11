@@ -28,17 +28,33 @@ svg {
     margin-top: 10px;
 }
 
+/* css as usual */
 #svgContainerDiv{
     background-color: #78B7C5;
     width: 98vw;
-    height: 88vh;
+    height: 80vh;
     display: block;
     margin: auto;
 }
 
 #mainSvg {
     width: 98vw;
-    height: 88vh;
+    height: 80vh;
+}
+
+/* condition for screen size minimum of 500px */
+@media (min-width:500px) {
+
+  /* your conditional / responsive CSS inside this condition */
+
+    #svgContainerDiv{
+        height: 88vh;
+    }
+
+    #mainSvg {
+        height: 88vh;
+    }
+
 }
 
 button {
